@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <!-- <RelativeLayout
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <net.daum.mf.map.api.MapView
         android:id="@+id/map_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" /> -->
-    <net.daum.android.map.MapView
-        android:id="@+id/map_view"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></net.daum.android.map.MapView>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/keywordEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="검색어 입력"
+            android:autofillHints="입력하세요" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색" />
+
+        <ListView
+            android:id="@+id/placesListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/keywordEditText" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/Currentlocation"
+        android:layout_width="250px"
+        android:layout_height="250px"
+        android:src="@drawable/current"
+        android:text="검색"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp" />
 </RelativeLayout>
