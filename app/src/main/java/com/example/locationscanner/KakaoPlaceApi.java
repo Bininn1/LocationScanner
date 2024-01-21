@@ -5,7 +5,10 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Query;
 
-public interface KakaoSearchApi {
+public interface KakaoPlaceApi {
     @GET("/v2/local/search/keyword.json")
-    Call<KakaoSearchResult> searchPlaces(@Query("query") String query, @Header("Authorization") String appKey);
+    Call<PlaceResult> getPlaceList(
+            @Header("Authorization") String restApiKey,
+            @Query("query") String keyword
+    );
 }

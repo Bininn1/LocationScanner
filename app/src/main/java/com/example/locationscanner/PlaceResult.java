@@ -3,12 +3,11 @@ package com.example.locationscanner;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
-public class KakaoSearchResult {
+public class PlaceResult {
     @SerializedName("documents")
-    List<KakaoDocument> documents;
+    private List<PlaceDocument> documents;
 
-
-    public List<KakaoDocument> getDocuments() {
+    public List<PlaceDocument> getDocuments() {
         return documents;
     }
 }
