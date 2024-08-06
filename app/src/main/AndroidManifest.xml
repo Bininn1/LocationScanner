@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LocationScanner"
         tools:targetApi="31">
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="4426d7f58b6287b42d03be8b057c6150"/>
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="${BuildConfig.KAKAO_APP_KEY}" />
         <activity
             android:name="MainActivity"
             android:exported="true">
